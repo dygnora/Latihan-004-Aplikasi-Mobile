@@ -19,6 +19,7 @@ void main() {
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
+                  color: Colors.red,
                 ),
               ),
               SizedBox(height: 8),
@@ -26,6 +27,7 @@ void main() {
                 'Selamat datang di Flutter',
                 style: TextStyle(
                   fontSize: 16,
+                  color: Colors.blue,
                 ),
               ),
             ],
