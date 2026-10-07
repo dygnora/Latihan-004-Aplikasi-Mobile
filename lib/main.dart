@@ -6,7 +6,30 @@ void main() {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
-          child: Text('Hello World!'),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.waving_hand,
+                size: 60,
+              ),
+              SizedBox(height: 16),
+              Text(
+                'Hello World!',
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 8),
+              Text(
+                'Selamat datang di Flutter',
+                style: TextStyle(
+                  fontSize: 16,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     ),
