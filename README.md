@@ -1,17 +1,82 @@
-# hello_world
+# Flutter Text Styling
 
-A new Flutter project.
+Project latihan Flutter untuk mempelajari penggunaan `TextStyle` dan variasi styling teks.
 
-## Getting Started
+## Text Styling yang Digunakan
 
-This project is a starting point for a Flutter application.
+- **Font Size:** Mengatur ukuran teks menggunakan `fontSize`.
+- **Font Weight:** Membuat teks tebal menggunakan `FontWeight.bold`.
+- **Font Color:** Mengatur warna teks menggunakan `Colors.red` dan `Colors.blue`.
+- **Font Style:** Membuat teks miring menggunakan `FontStyle.italic`.
+- **Letter Spacing:** Mengatur jarak antarhuruf menggunakan `letterSpacing`.
+- **Text Decoration:** Menambahkan garis bawah menggunakan `TextDecoration.underline`.
+- **Text Background Color:** Memberikan warna latar belakang pada teks menggunakan `backgroundColor`.
 
-A few resources to get you started if this is your first Flutter project:
+## KODE
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+````dart
+import 'package:flutter/material.dart';
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.yellow,
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.waving_hand,
+                size: 60,
+              ),
+              SizedBox(height: 16),
+
+              // TextStyle: ukuran, warna, dan ketebalan
+              Text(
+                '~Hello World~',
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.red,
+                ),
+              ),
+              SizedBox(height: 8),
+
+              // TextStyle: warna dan gaya italic
+              Text(
+                'Selamat datang di Flutter',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.blue,
+                ),
+              ),
+              SizedBox(height: 16),
+
+              // TextStyle: jarak huruf dan dekorasi
+              Text(
+                'Deny Dermawan - 1124160250',
+                style: TextStyle(
+                  fontSize: 14,
+                  letterSpacing: 2,
+                  decoration: TextDecoration.underline,
+                  backgroundColor: Colors.white,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+````
