@@ -5,6 +5,7 @@ void main() {
     const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.yellow, // Warna background
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
